@@ -4,20 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sanjay S - AI Engineer & Machine Learning Specialist. Expert in MCP, GenAI, RAG systems, and AI Copilots.">
-    <meta name="keywords" content="AI Engineer, Machine Learning Engineer, GenAI, MCP, RAG, AI Copilots, LangChain, Sanjay S">
-    <title>Sanjay S - AI Engineer & Machine Learning Specialist</title>
+    <meta name="description" content="Sanjay S — AI Engineer specializing in MCP servers, agentic RAG copilots, and document intelligence pipelines. Production AI systems built at SPAN Technology.">
+    <meta name="keywords" content="AI Engineer, LLM Engineer, MCP, Model Context Protocol, RAG, LangChain, LangGraph, Agentic AI, Sanjay S">
+    <meta name="author" content="Sanjay S">
+    <link rel="canonical" href="https://sanjay-sss.github.io/Portfolio/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sanjay S - AI Engineer">
+    <meta property="og:description" content="AI Engineer specializing in MCP servers, agentic RAG copilots, and document intelligence pipelines.">
+    <meta property="og:url" content="https://sanjay-sss.github.io/Portfolio/">
+    <meta property="og:image" content="assets/profile.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Sanjay S - AI Engineer">
+    <meta name="twitter:description" content="AI Engineer specializing in MCP servers, agentic RAG copilots, and document intelligence pipelines.">
+    <meta name="twitter:image" content="assets/profile.jpg">
+
+    <title>Sanjay S - AI Engineer</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sanjay S",
+        "jobTitle": "AI Engineer",
+        "url": "https://sanjay-sss.github.io/Portfolio/",
+        "email": "mailto:sanjaysiva0204@gmail.com",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "SPAN Technology"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/sanjay0204",
+            "https://github.com/sanjay-sss"
+        ]
+    }
+    </script>
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
          :root {
             --primary-color: #4f46e5;
             --secondary-color: #6d28d9;
@@ -30,7 +65,7 @@
             --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
-        
+
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
@@ -38,12 +73,37 @@
             background: var(--bg-color);
             overflow-x: hidden;
         }
-        
+
         html {
             scroll-behavior: smooth;
         }
+
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        textarea:focus-visible {
+            outline: 3px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 1rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.5rem;
+            z-index: 2000;
+            text-decoration: none;
+            transition: top 0.2s ease;
+        }
+
+        .skip-link:focus {
+            top: 1rem;
+        }
         /* Navigation */
-        
+
         nav {
             position: fixed;
             top: 0;
@@ -55,11 +115,11 @@
             transition: all 0.3s ease;
             border-bottom: 1px solid var(--border-color);
         }
-        
+
         nav.scrolled {
             box-shadow: var(--shadow);
         }
-        
+
         .nav-container {
             max-width: 1280px;
             margin: 0 auto;
@@ -68,21 +128,22 @@
             align-items: center;
             padding: 0 2rem;
         }
-        
+
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
             background: var(--gradient);
             -webkit-background-clip: text;
+            background-clip: text;
             color: transparent;
         }
-        
+
         .nav-menu {
             display: flex;
             list-style: none;
             gap: 2.5rem;
         }
-        
+
         .nav-link {
             text-decoration: none;
             color: var(--text-color);
@@ -90,7 +151,7 @@
             transition: color 0.3s ease;
             position: relative;
         }
-        
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -101,24 +162,27 @@
             background: var(--gradient);
             transition: width 0.3s ease;
         }
-        
+
         .nav-link:hover::after,
         .nav-link.active::after {
             width: 100%;
         }
-        
+
         .nav-link:hover,
         .nav-link.active {
             color: var(--primary-color);
         }
-        
+
         .mobile-menu {
             display: none;
             flex-direction: column;
             cursor: pointer;
             gap: 5px;
+            background: none;
+            border: none;
+            padding: 0.5rem;
         }
-        
+
         .mobile-menu span {
             width: 28px;
             height: 3px;
@@ -127,7 +191,7 @@
             border-radius: 2px;
         }
         /* Hero Section */
-        
+
         .hero {
             min-height: 100vh;
             display: flex;
@@ -138,52 +202,46 @@
             overflow: hidden;
             color: white;
         }
-        
-        #particles-js {
+
+        .hero::before {
+            content: '';
             position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
+            inset: 0;
+            background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.12), transparent 40%), radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1), transparent 40%);
+            pointer-events: none;
         }
-        
+
         .hero-content {
             text-align: center;
             max-width: 900px;
             padding: 0 2rem;
             z-index: 2;
         }
-        
+
+        .hero-eyebrow {
+            display: inline-block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            opacity: 0.85;
+            margin-bottom: 1rem;
+        }
+
         .hero-title {
             font-size: 4rem;
             font-weight: 800;
             margin-bottom: 1rem;
             letter-spacing: -1px;
         }
-        
-        .typed-cursor {
-            font-size: 4rem;
-            opacity: 1;
-            animation: blink 0.7s infinite;
-        }
-        
-        @keyframes blink {
-            0%,
-            100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0;
-            }
-        }
-        
+
         .hero-subtitle {
             font-size: 1.75rem;
             font-weight: 300;
             margin-bottom: 2rem;
             opacity: 0.9;
         }
-        
+
         .hero-description {
             font-size: 1.125rem;
             max-width: 700px;
@@ -191,14 +249,14 @@
             line-height: 1.8;
             opacity: 0.9;
         }
-        
+
         .cta-buttons {
             display: flex;
             gap: 1.5rem;
             justify-content: center;
             flex-wrap: wrap;
         }
-        
+
         .btn {
             padding: 1rem 2.5rem;
             border-radius: 9999px;
@@ -210,32 +268,33 @@
             gap: 0.75rem;
             font-size: 1rem;
             cursor: pointer;
+            border: none;
         }
-        
+
         .btn-primary {
             background: white;
             color: var(--primary-color);
         }
-        
+
         .btn-primary:hover {
             background: rgba(255, 255, 255, 0.9);
             transform: translateY(-3px);
             box-shadow: var(--shadow);
         }
-        
+
         .btn-secondary {
             background: transparent;
             color: white;
             border: 2px solid rgba(255, 255, 255, 0.3);
         }
-        
+
         .btn-secondary:hover {
             background: rgba(255, 255, 255, 0.1);
             transform: translateY(-3px);
             box-shadow: var(--shadow);
         }
         /* Sections */
-        
+
         .section {
             padding: 6rem 0;
             max-width: 1280px;
@@ -243,7 +302,7 @@
             padding-left: 2rem;
             padding-right: 2rem;
         }
-        
+
         .section-title {
             text-align: center;
             font-size: 3rem;
@@ -251,7 +310,7 @@
             margin-bottom: 4rem;
             position: relative;
         }
-        
+
         .section-title::after {
             content: '';
             position: absolute;
@@ -264,18 +323,18 @@
             border-radius: 9999px;
         }
         /* About Section */
-        
+
         .about-content {
             display: grid;
             grid-template-columns: 1fr 2fr;
             gap: 4rem;
             align-items: center;
         }
-        
+
         .about-image {
             position: relative;
         }
-        
+
         .profile-img {
             width: 100%;
             max-width: 320px;
@@ -285,28 +344,28 @@
             box-shadow: var(--shadow);
             transition: all 0.4s ease;
         }
-        
+
         .profile-img:hover {
-            transform: scale(1.05) rotate(3deg);
+            transform: scale(1.03);
         }
-        
+
         .about-text {
             font-size: 1.125rem;
             line-height: 1.8;
             color: var(--light-text);
         }
-        
+
         .about-text p {
             margin-bottom: 1.5rem;
         }
-        
+
         .stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
-        
+
         .stat-item {
             text-align: center;
             padding: 2rem;
@@ -315,18 +374,18 @@
             box-shadow: var(--shadow);
             transition: all 0.3s ease;
         }
-        
+
         .stat-item:hover {
-            transform: translateY(-5px) scale(1.02);
+            transform: translateY(-5px);
         }
-        
+
         .stat-number {
             font-size: 2.5rem;
             font-weight: 800;
             color: var(--primary-color);
             display: block;
         }
-        
+
         .stat-label {
             font-size: 1rem;
             color: var(--light-text);
@@ -334,13 +393,13 @@
             font-weight: 500;
         }
         /* Skills Section */
-        
+
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
-        
+
         .skill-category {
             background: var(--card-bg);
             padding: 2.5rem;
@@ -348,13 +407,13 @@
             box-shadow: var(--shadow);
             transition: all 0.3s ease;
         }
-        
+
         .skill-category:hover {
             transform: translateY(-5px);
         }
-        
+
         .skill-category h3 {
-            font-size: 1.5rem;
+            font-size: 1.35rem;
             margin-bottom: 1.5rem;
             color: var(--primary-color);
             display: flex;
@@ -362,32 +421,24 @@
             gap: 0.75rem;
             font-weight: 700;
         }
-        
-        .skill-progress {
-            margin-bottom: 1rem;
-        }
-        
-        .skill-label {
+
+        .skill-tags {
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+            flex-wrap: wrap;
+            gap: 0.6rem;
         }
-        
-        .progress-bar {
-            height: 8px;
-            background: #e5e7eb;
+
+        .skill-tag {
+            background: #f3f4f6;
+            color: var(--text-color);
+            padding: 0.45rem 1rem;
             border-radius: 9999px;
-            overflow: hidden;
-        }
-        
-        .progress-fill {
-            height: 100%;
-            background: var(--gradient);
-            transition: width 1s ease-out;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid var(--border-color);
         }
         /* Projects Section */
-        
+
         .project-filters {
             display: flex;
             justify-content: center;
@@ -395,7 +446,7 @@
             margin-bottom: 3rem;
             flex-wrap: wrap;
         }
-        
+
         .filter-btn {
             padding: 0.75rem 1.5rem;
             border-radius: 9999px;
@@ -406,73 +457,105 @@
             transition: all 0.3s ease;
             border: none;
         }
-        
+
         .filter-btn.active,
         .filter-btn:hover {
             background: var(--gradient);
             color: white;
         }
-        
+
+        .projects-subheading {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--light-text);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin: 3.5rem 0 1.5rem;
+        }
+
+        .projects-subheading:first-of-type {
+            margin-top: 0;
+        }
+
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
             gap: 2.5rem;
         }
-        
+
         .project-card {
             background: var(--card-bg);
             border-radius: 1.5rem;
             overflow: hidden;
             box-shadow: var(--shadow);
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
         }
-        
+
         .project-card:hover {
-            transform: translateY(-10px) scale(1.02);
+            transform: translateY(-6px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        
+
         .project-header {
             padding: 2rem;
             background: var(--gradient);
             color: white;
         }
-        
+
         .project-title {
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
         }
-        
+
         .project-subtitle {
-            font-size: 1.125rem;
+            font-size: 1.05rem;
             opacity: 0.9;
             font-weight: 400;
         }
-        
+
         .project-content {
             padding: 2rem;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
         }
-        
+
         .project-description {
             color: var(--light-text);
             line-height: 1.7;
             margin-bottom: 1.5rem;
-            flex-grow: 1;
         }
-        
+
+        .case-study-block {
+            margin-bottom: 1.25rem;
+        }
+
+        .case-label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--primary-color);
+            margin-bottom: 0.35rem;
+        }
+
+        .case-study-block p {
+            color: var(--light-text);
+            line-height: 1.7;
+        }
+
         .project-tech {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
             margin-bottom: 2rem;
+            margin-top: auto;
         }
-        
+
         .tech-tag {
             background: #f3f4f6;
             color: var(--text-color);
@@ -481,20 +564,13 @@
             font-size: 0.875rem;
             font-weight: 500;
             border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
         }
-        
-        .project-card:hover .tech-tag {
-            background: var(--gradient);
-            color: white;
-        }
-        
+
         .project-links {
             display: flex;
             gap: 1.5rem;
-            margin-top: auto;
         }
-        
+
         .project-link {
             display: flex;
             align-items: center;
@@ -504,19 +580,28 @@
             font-weight: 600;
             transition: all 0.3s ease;
         }
-        
+
         .project-link:hover {
             color: var(--secondary-color);
             transform: translateX(5px);
         }
+
+        .project-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--light-text);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
         /* Experience Section */
-        
+
         .experience-timeline {
             position: relative;
             max-width: 1000px;
             margin: 0 auto;
         }
-        
+
         .experience-timeline::before {
             content: '';
             position: absolute;
@@ -526,28 +611,23 @@
             width: 2px;
             background: var(--border-color);
         }
-        
+
         .experience-item {
             position: relative;
             margin-bottom: 4rem;
             width: 45%;
-            transition: all 0.3s ease;
         }
-        
-        .experience-item:hover {
-            transform: scale(1.02);
-        }
-        
+
         .experience-item:nth-child(odd) {
             left: 0;
             text-align: right;
         }
-        
+
         .experience-item:nth-child(even) {
             left: 55%;
             text-align: left;
         }
-        
+
         .experience-content {
             background: var(--card-bg);
             padding: 2.5rem;
@@ -555,7 +635,7 @@
             box-shadow: var(--shadow);
             position: relative;
         }
-        
+
         .experience-content::before {
             content: '';
             position: absolute;
@@ -566,53 +646,48 @@
             border-radius: 50%;
             transform: translateY(-50%);
         }
-        
+
         .experience-item:nth-child(odd) .experience-content::before {
             right: -40px;
         }
-        
+
         .experience-item:nth-child(even) .experience-content::before {
             left: -40px;
         }
-        
+
         .experience-title {
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--primary-color);
             margin-bottom: 0.5rem;
         }
-        
+
         .experience-company {
             font-size: 1.25rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
-        
+
         .experience-date {
             color: var(--light-text);
             font-size: 1rem;
             margin-bottom: 1.5rem;
             font-weight: 500;
         }
-        
+
         .experience-description ul {
             list-style: none;
             padding: 0;
         }
-        
+
         .experience-description li {
             position: relative;
             padding-left: 1.75rem;
             margin-bottom: 1rem;
             color: var(--light-text);
             line-height: 1.7;
-            transition: transform 0.3s ease;
         }
-        
-        .experience-description li:hover {
-            transform: translateX(5px);
-        }
-        
+
         .experience-description li::before {
             content: '→';
             position: absolute;
@@ -621,20 +696,20 @@
             font-weight: bold;
         }
         /* Contact Section */
-        
+
         .contact-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
         }
-        
+
         .contact-info {
             background: var(--card-bg);
             padding: 2.5rem;
             border-radius: 1.5rem;
             box-shadow: var(--shadow);
         }
-        
+
         .contact-item {
             display: flex;
             align-items: center;
@@ -645,12 +720,11 @@
             border-radius: 1rem;
             transition: all 0.3s ease;
         }
-        
+
         .contact-item:hover {
-            transform: scale(1.02);
-            background: #f9fafb;
+            background: #eef0f3;
         }
-        
+
         .contact-icon {
             width: 48px;
             height: 48px;
@@ -661,35 +735,43 @@
             justify-content: center;
             color: white;
             font-size: 1.25rem;
-            transition: transform 0.3s ease;
+            flex-shrink: 0;
         }
-        
-        .contact-item:hover .contact-icon {
-            transform: rotate(360deg);
-        }
-        
+
         .contact-details h4 {
             font-weight: 700;
             margin-bottom: 0.25rem;
             font-size: 1.125rem;
         }
-        
-        .contact-details p {
+
+        .contact-details p,
+        .contact-details a {
             color: var(--light-text);
             font-size: 1rem;
+            text-decoration: none;
         }
-        
+
+        .contact-details a:hover {
+            color: var(--primary-color);
+        }
+
         .contact-form {
             background: var(--card-bg);
             padding: 2.5rem;
             border-radius: 1.5rem;
             box-shadow: var(--shadow);
         }
-        
+
+        .contact-form-note {
+            color: var(--light-text);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
         .form-group {
             margin-bottom: 1.75rem;
         }
-        
+
         .form-group label {
             display: block;
             margin-bottom: 0.75rem;
@@ -697,7 +779,7 @@
             color: var(--text-color);
             font-size: 1rem;
         }
-        
+
         .form-group input,
         .form-group textarea {
             width: 100%;
@@ -708,21 +790,22 @@
             font-size: 1rem;
             transition: all 0.3s ease;
             background: #f9fafb;
+            color: var(--text-color);
         }
-        
+
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
             border-color: var(--primary-color);
             box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
         }
-        
+
         .form-group textarea {
             resize: vertical;
             min-height: 150px;
         }
         /* Footer */
-        
+
         footer {
             background: var(--text-color);
             color: white;
@@ -730,20 +813,20 @@
             padding: 4rem 0;
             position: relative;
         }
-        
+
         .footer-content {
             max-width: 1280px;
             margin: 0 auto;
             padding: 0 2rem;
         }
-        
+
         .social-links {
             display: flex;
             justify-content: center;
             gap: 1.5rem;
             margin-bottom: 2rem;
         }
-        
+
         .social-link {
             width: 48px;
             height: 48px;
@@ -755,20 +838,19 @@
             color: white;
             text-decoration: none;
             font-size: 1.25rem;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease;
         }
-        
+
         .social-link:hover {
-            transform: rotate(360deg) scale(1.1);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-4px);
         }
-        
+
         footer p {
             opacity: 0.8;
             font-size: 0.875rem;
         }
         /* Dark Mode */
-        
+
         body.dark-mode {
             --text-color: #f9fafb;
             --light-text: #9ca3af;
@@ -776,7 +858,14 @@
             --card-bg: #1f2937;
             --border-color: #374151;
         }
-        
+
+        body.dark-mode .skill-tag,
+        body.dark-mode .tech-tag,
+        body.dark-mode .filter-btn,
+        body.dark-mode .contact-item {
+            background: #273244;
+        }
+
         .dark-toggle {
             position: fixed;
             bottom: 2rem;
@@ -792,13 +881,14 @@
             cursor: pointer;
             z-index: 1000;
             transition: all 0.3s ease;
+            border: none;
         }
-        
+
         .dark-toggle:hover {
             transform: scale(1.1);
         }
         /* Responsive Design */
-        
+
         @media (max-width: 1024px) {
             .about-content,
             .contact-content {
@@ -816,7 +906,7 @@
                 left: -56px !important;
             }
         }
-        
+
         @media (max-width: 768px) {
             .nav-menu {
                 position: absolute;
@@ -862,7 +952,7 @@
                 gap: 0.5rem;
             }
         }
-        
+
         @media (max-width: 480px) {
             .hero-title {
                 font-size: 2.5rem;
@@ -875,17 +965,29 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            * {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
     </style>
 </head>
 
 <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
     <!-- Dark Mode Toggle -->
-    <div class="dark-toggle" id="darkToggle">
-        <i class="fas fa-moon"></i>
-    </div>
+    <button class="dark-toggle" id="darkToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+        <i class="fas fa-moon" aria-hidden="true"></i>
+    </button>
 
     <!-- Navigation -->
-    <nav id="navbar">
+    <nav id="navbar" aria-label="Primary">
         <div class="nav-container">
             <div class="logo">Sanjay S</div>
             <ul class="nav-menu" id="navMenu">
@@ -896,489 +998,455 @@
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="mobile-menu" id="mobileMenu">
+            <button class="mobile-menu" id="mobileMenu" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div id="particles-js"></div>
-        <div class="hero-content" data-aos="fade-up">
-            <h1 class="hero-title"><span id="typed"></span></h1>
-            <p class="hero-subtitle">Crafting Intelligent AI Solutions with Quantifiable Impact</p>
-            <p class="hero-description">
-                Specializing in MCP protocols, AI Copilots, and enterprise-grade RAG systems. Expert in deploying scalable Generative AI applications that deliver measurable business value and drive innovation across industries.
-            </p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">
-                    <i class="fas fa-rocket"></i> Explore Projects
-                </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <i class="fas fa-envelope"></i> Connect Now
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h2 class="section-title" data-aos="fade-up">About Me</h2>
-        <div class="about-content" data-aos="fade-up" data-aos-delay="100">
-            <div class="about-image">
-                <img src="assets/profile.jpg" alt="Sanjay S - AI Engineer" class="profile-img">
-            </div>
-            <div class="about-text">
-                <p>
-                    As an AI Engineer at SPAN Technology with 1.5+ years of experience, I specialize in developing custom MCP (Model Context Protocol) servers, AI Copilots, and advanced document intelligence pipelines. My expertise spans from building scalable RAG systems to deploying production-ready AI agents that improve system scalability by 40%.
+    <main id="main">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content" data-aos="fade-up">
+                <p class="hero-eyebrow">AI Engineer · SPAN Technology</p>
+                <h1 class="hero-title">Sanjay S</h1>
+                <p class="hero-subtitle">Agentic Systems, RAG &amp; MCP</p>
+                <p class="hero-description">
+                    I build production AI systems: custom MCP servers used across multiple AI clients, agentic RAG copilots, and document intelligence pipelines that automate real enterprise workflows.
                 </p>
-                <p>
-                    I have successfully architected AI solutions that process 10,000+ documents with 95% accuracy, reduced filing errors by 35%, and deployed models using containerization and cloud services. My technical stack includes LangChain, LangGraph, OpenAI APIs, and AWS services, with a strong focus on MLOps and model deployment.
-                </p>
-                <p>
-                    Committed to creating AI solutions with quantifiable business impact, I focus on building systems that not only showcase technical excellence but deliver real-world value through improved efficiency, reduced errors, and enhanced user experiences.
-                </p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket" aria-hidden="true"></i> Explore Projects
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope" aria-hidden="true"></i> Get in Touch
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="stats" data-aos="fade-up" data-aos-delay="200">
-            <div class="stat-item">
-                <span class="stat-number">1.5+</span>
-                <span class="stat-label">Years in AI</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">40%</span>
-                <span class="stat-label">Scalability Improvement</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">10k+</span>
-                <span class="stat-label">Documents Processed</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">95%</span>
-                <span class="stat-label">Model Accuracy</span>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <h2 class="section-title" data-aos="fade-up">Technical Expertise</h2>
-        <div class="skills-grid" data-aos="fade-up" data-aos-delay="100">
-            <div class="skill-category">
-                <h3><i class="fas fa-robot"></i> GenAI & LLMs</h3>
-                <div class="skill-progress">
-                    <div class="skill-label">MCP Protocols <span>95%</span></div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 0%" data-width="95"></div>
-                    </div>
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <div class="about-content" data-aos="fade-up" data-aos-delay="100">
+                <div class="about-image">
+                    <img src="assets/profile.jpg" alt="Sanjay S - AI Engineer" class="profile-img">
                 </div>
-                <div class="skill-progress">
-                    <div class="skill-label">LangChain & LangGraph <span>95%</span></div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 0%" data-width="95"></div>
-                    </div>
-                </div>
-                <div class="skill-progress">
-                    <div class="skill-label">OpenAI & LLMs <span>90%</span></div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 0%" data-width="90"></div>
-                    </div>
-                </div>
-                <div class="skill-progress">
-                    <div class="skill-label">RAG Systems <span>90%</span></div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 0%" data-width="90"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3><i class="fas fa-brain"></i> Machine Learning</h3>
-                <div class="skill-progress">
-                    <div class="skill-label">PyTorch & TensorFlow <span>85%</span></div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 0%" data-width="85"></div>
-                    </div>
-                </div>
-                <div class="skill-progress">
-                    <div class="skill-label">Model Fine-tuning <span>85%</span></div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 0%" data-width="85"></div>
-                    </div>
-                </div>
-                <div class="skill-progress">
-                    <div class="skill-label">Computer Vision & NLP <span>80%</span></div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 0%" data-width="80"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
-                <div class="skill-progress">
-                    <div class="skill-label">AWS Services <span>90%</span></div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 0%" data-width="90"></div>
-                    </div>
-                </div>
-                <div class="skill-progress">
-                    <div class="skill-label">Docker Deployment <span>85%</span></div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 0%" data-width="85"></div>
-                    </div>
-                </div>
-                <div class="skill-progress">
-                    <div class="skill-label">Vector Databases <span>85%</span></div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 0%" data-width="85"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3><i class="fas fa-code"></i> Development</h3>
-                <div class="skill-progress">
-                    <div class="skill-label">Python & SQL <span>95%</span></div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 0%" data-width="95"></div>
-                    </div>
-                </div>
-                <div class="skill-progress">
-                    <div class="skill-label">FastAPI & Git <span>85%</span></div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 0%" data-width="85"></div>
-                    </div>
-                </div>
-                <div class="skill-progress">
-                    <div class="skill-label">Data Analysis <span>90%</span></div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 0%" data-width="90"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
-        <div class="project-filters" data-aos="fade-up" data-aos-delay="100">
-            <button class="filter-btn active" data-filter="*">All</button>
-            <button class="filter-btn" data-filter=".ai">AI/ML</button>
-            <button class="filter-btn" data-filter=".data">Data</button>
-            <button class="filter-btn" data-filter=".web">Web</button>
-        </div>
-        <div class="projects-grid" data-aos="fade-up" data-aos-delay="200">
-            <div class="project-card ai">
-                <div class="project-header">
-                    <h3 class="project-title">QueryInsight</h3>
-                    <p class="project-subtitle">AI-Powered Natural Language to SQL System</p>
-                </div>
-                <div class="project-content">
-                    <p class="project-description">
-                        Advanced LLM-powered system that converts natural language queries to SQL, executes them against databases, and generates interactive visualizations. Features automated data visualization and web interface for seamless user experience.
+                <div class="about-text">
+                    <p>
+                        I'm an AI Engineer at SPAN Technology, where I build custom MCP (Model Context Protocol) servers used across multiple AI clients — Claude, ChatGPT, Cursor, and Cline — with a multi-transport design (SSE and the native MCP protocol) that's extensible to new integrations.
                     </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">LLM Integration</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">Data Visualization</span>
-                        <span class="tech-tag">Web Interface</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/sanjay-sss/sql-agent-llm-visualizer" class="project-link" target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card ai data">
-                <div class="project-header">
-                    <h3 class="project-title">RAGStack</h3>
-                    <p class="project-subtitle">Enterprise RAG Q&A System</p>
-                </div>
-                <div class="project-content">
-                    <p class="project-description">
-                        Scalable RAG platform for document-based Q&A with advanced embedding generation, vector search, and conversational memory. Features observability tools and multi-document support for enterprise deployment.
+                    <p>
+                        I also work on an AI Copilot that combines an OpenAI-based chatbot with Anthropic Claude for agentic workflows. I migrated its vector store from Pinecone to PostgreSQL/pgvector and added Langfuse for LLM observability — that work has contributed to a 35% reduction in filing errors.
                     </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">RAG Architecture</span>
-                        <span class="tech-tag">Vector Search</span>
-                        <span class="tech-tag">LLM Integration</span>
-                        <span class="tech-tag">Document Processing</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/sanjay-sss/rag-assistant" class="project-link" target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card web ai">
-                <div class="project-header">
-                    <h3 class="project-title">AI-Powered Web Monitor</h3>
-                    <p class="project-subtitle">Smart Content Change Detection & Summarization</p>
-                </div>
-                <div class="project-content">
-                    <p class="project-description">
-                        Intelligent web monitoring system that detects content changes using SHA256 hashing, provides automated alerts, and generates AI-powered summaries of changes using LLM integration for comprehensive tracking.
+                    <p>
+                        Currently, I'm building a document intelligence pipeline for tax form processing (1042-S and W-9), pairing AWS Textract for structured OCR with Google Gemini for complex, unstructured extraction — a system that has processed 10,000+ documents in production.
                     </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Change Detection</span>
-                        <span class="tech-tag">AI Summarization</span>
-                        <span class="tech-tag">Web Scraping</span>
-                        <span class="tech-tag">Database Integration</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/sanjay-sss/web-change-monitor" class="project-link" target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
+                </div>
+            </div>
+            <div class="stats" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-item">
+                    <span class="stat-number" data-value="2.5" data-suffix="+" data-decimals="1">0+</span>
+                    <span class="stat-label">Years in AI Engineering</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-value="35" data-suffix="%">0%</span>
+                    <span class="stat-label">Fewer Filing Errors</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-value="10" data-suffix="k+">0k+</span>
+                    <span class="stat-label">Documents Processed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-value="15" data-suffix="%">0%</span>
+                    <span class="stat-label">Efficiency Gain (Neewee)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2 class="section-title" data-aos="fade-up">Technical Expertise</h2>
+            <div class="skills-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-category">
+                    <h3><i class="fas fa-robot" aria-hidden="true"></i> Agentic AI &amp; MCP</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MCP Protocol</span>
+                        <span class="skill-tag">SSE Transport</span>
+                        <span class="skill-tag">Multi-Client Integration</span>
+                        <span class="skill-tag">LangChain</span>
+                        <span class="skill-tag">LangGraph</span>
+                        <span class="skill-tag">OpenAI API</span>
+                        <span class="skill-tag">Anthropic Claude</span>
+                        <span class="skill-tag">RAG Architecture</span>
                     </div>
                 </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-database" aria-hidden="true"></i> Retrieval &amp; Observability</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PostgreSQL / pgvector</span>
+                        <span class="skill-tag">Pinecone Migration</span>
+                        <span class="skill-tag">Vector Search</span>
+                        <span class="skill-tag">Langfuse</span>
+                        <span class="skill-tag">Conversational Memory</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-file-invoice" aria-hidden="true"></i> Document Intelligence</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS Textract</span>
+                        <span class="skill-tag">Google Gemini</span>
+                        <span class="skill-tag">Multi-Model Extraction</span>
+                        <span class="skill-tag">Tax Form Automation</span>
+                        <span class="skill-tag">Retry / Error Handling</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-cloud" aria-hidden="true"></i> Cloud, DevOps &amp; Core Engineering</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS (S3, CloudWatch, Bedrock)</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Jenkins CI/CD</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+            <div class="project-filters" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="*">All</button>
+                <button class="filter-btn" data-filter=".production">Production Systems</button>
+                <button class="filter-btn" data-filter=".personal">Personal Projects</button>
             </div>
 
-            <div class="project-card ai">
-                <div class="project-header">
-                    <h3 class="project-title">Speech Emotion Recognition</h3>
-                    <p class="project-subtitle">Deep Learning Audio Classifier</p>
-                </div>
-                <div class="project-content">
-                    <p class="project-description">
-                        CNN-based deep learning model achieving 85% accuracy in real-time speech emotion classification. Processes audio features to detect emotions for applications in customer service and mental health analytics.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Deep Learning</span>
-                        <span class="tech-tag">CNN Architecture</span>
-                        <span class="tech-tag">Audio Processing</span>
-                        <span class="tech-tag">Real-time Classification</span>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h3 class="projects-subheading">Production Systems — SPAN Technology</h3>
+                <div class="projects-grid">
+                    <div class="project-card production">
+                        <div class="project-header">
+                            <h3 class="project-title">MCP Server Platform</h3>
+                            <p class="project-subtitle">Multi-Transport, Multi-Client Protocol Server</p>
+                        </div>
+                        <div class="project-content">
+                            <div class="case-study-block">
+                                <span class="case-label">Problem</span>
+                                <p>Different AI clients — Claude, ChatGPT, Cursor, Cline — each needed their own integration path into internal systems.</p>
+                            </div>
+                            <div class="case-study-block">
+                                <span class="case-label">Architecture</span>
+                                <p>Custom MCP servers and clients supporting both SSE and the native MCP protocol, with an extensible design so new form types can be added without reworking the transport layer.</p>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">MCP Protocol</span>
+                                <span class="tech-tag">SSE</span>
+                                <span class="tech-tag">Multi-Client Design</span>
+                            </div>
+                            <div class="project-badge">
+                                <i class="fas fa-lock" aria-hidden="true"></i> Internal · Production System
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/sanjay-sss/Speech-emotion-recognition-cnn" class="project-link" target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-        <h2 class="section-title" data-aos="fade-up">Professional Experience</h2>
-        <div class="experience-timeline" data-aos="fade-up" data-aos-delay="100">
-            <div class="experience-item">
-                <div class="experience-content">
-                    <h3 class="experience-title">AI Engineer</h3>
-                    <h4 class="experience-company">SPAN Technology</h4>
-                    <p class="experience-date">December 2023 - Present</p>
-                    <div class="experience-description">
-                        <ul>
-                            <li>Developed custom MCP (Model Context Protocol) servers and clients, improving system scalability by 40% through enhanced AI model communication</li>
-                            <li>Created AI Copilots with NLP and RAG architecture, decreasing filing errors by 35% and streamlining user workflows</li>
-                            <li>Architected document intelligence pipelines processing 10,000+ documents with 95% accuracy using advanced LLM integration</li>
-                            <li>Built AI agents using LangChain and LangGraph, significantly reducing customer support response times</li>
-                            <li>Implemented scalable model deployment using Docker containers and AWS Lambda for production environments</li>
-                        </ul>
+                    <div class="project-card production">
+                        <div class="project-header">
+                            <h3 class="project-title">Enterprise RAG Copilot</h3>
+                            <p class="project-subtitle">Agentic Q&amp;A Copilot for Enterprise Workflows</p>
+                        </div>
+                        <div class="project-content">
+                            <div class="case-study-block">
+                                <span class="case-label">Architecture</span>
+                                <p>AI Copilot combining an OpenAI-based chatbot with Anthropic Claude for agentic flows. Migrated the vector store from Pinecone to PostgreSQL/pgvector and instrumented it with Langfuse for LLM observability.</p>
+                            </div>
+                            <div class="case-study-block">
+                                <span class="case-label">Impact</span>
+                                <p>Contributed to a 35% reduction in filing errors across document-driven workflows.</p>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">OpenAI</span>
+                                <span class="tech-tag">Anthropic Claude</span>
+                                <span class="tech-tag">LangChain / LangGraph</span>
+                                <span class="tech-tag">pgvector</span>
+                                <span class="tech-tag">Langfuse</span>
+                            </div>
+                            <div class="project-badge">
+                                <i class="fas fa-lock" aria-hidden="true"></i> Internal · Production System
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="experience-item">
-                <div class="experience-content">
-                    <h3 class="experience-title">Data Scientist Intern</h3>
-                    <h4 class="experience-company">NEEWEE Analytics</h4>
-                    <p class="experience-date">July 2022 - December 2022</p>
-                    <div class="experience-description">
-                        <ul>
-                            <li>Performed machine learning analysis on large-scale manufacturing data, achieving 15% improvement in production efficiency</li>
-                            <li>Developed recommendation systems using ML algorithms for optimal parameter identification and process optimization</li>
-                            <li>Collaborated with cross-functional teams to implement data-driven solutions, contributing to 20% increase in overall productivity</li>
-                        </ul>
+                    <div class="project-card production">
+                        <div class="project-header">
+                            <h3 class="project-title">Document Intelligence Pipeline</h3>
+                            <p class="project-subtitle">Multi-Model Extraction for Tax Form Processing</p>
+                        </div>
+                        <div class="project-content">
+                            <div class="case-study-block">
+                                <span class="case-label">Problem</span>
+                                <p>Automating extraction from 1042-S and W-9 tax forms, which mix structured tables with unstructured free text.</p>
+                            </div>
+                            <div class="case-study-block">
+                                <span class="case-label">Architecture</span>
+                                <p>Multi-model pipeline pairing AWS Textract for structured OCR with Google Gemini for complex, unstructured extraction, with retry and error-handling logic.</p>
+                            </div>
+                            <div class="case-study-block">
+                                <span class="case-label">Scale</span>
+                                <p>10,000+ documents processed to date; the pipeline is an ongoing, actively developed system.</p>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">AWS Textract</span>
+                                <span class="tech-tag">Google Gemini</span>
+                                <span class="tech-tag">LangGraph</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Jenkins CI/CD</span>
+                            </div>
+                            <div class="project-badge">
+                                <i class="fas fa-lock" aria-hidden="true"></i> Internal · Production System
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <h2 class="section-title" data-aos="fade-up">Let's Collaborate</h2>
-        <div class="contact-content" data-aos="fade-up" data-aos-delay="100">
-            <div class="contact-info">
-                <h3 style="margin-bottom: 2rem; color: var(--primary-color); font-weight: 700; font-size: 1.5rem;">Contact Information</h3>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
+                <h3 class="projects-subheading">Personal &amp; Open-Source Projects</h3>
+                <div class="projects-grid">
+                    <div class="project-card personal">
+                        <div class="project-header">
+                            <h3 class="project-title">QueryInsight</h3>
+                            <p class="project-subtitle">AI-Powered Natural Language to SQL System</p>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                LLM-powered system that converts natural language queries to SQL, executes them against a database, and generates interactive visualizations of the results.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">LLM Integration</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Data Visualization</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/sanjay-sss/sql-agent-llm-visualizer" class="project-link" target="_blank" rel="noopener">
+                                    <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="contact-details">
-                        <h4>Email</h4>
-                        <p>sanjaysiva0204@gmail.com</p>
+
+                    <div class="project-card personal">
+                        <div class="project-header">
+                            <h3 class="project-title">RAGStack</h3>
+                            <p class="project-subtitle">RAG Q&amp;A System</p>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                RAG platform for document-based Q&amp;A with embedding generation, vector search, and conversational memory, with support for multiple documents.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">RAG Architecture</span>
+                                <span class="tech-tag">Vector Search</span>
+                                <span class="tech-tag">LLM Integration</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/sanjay-sss/rag-assistant" class="project-link" target="_blank" rel="noopener">
+                                    <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
+
+                    <div class="project-card personal">
+                        <div class="project-header">
+                            <h3 class="project-title">AI-Powered Web Monitor</h3>
+                            <p class="project-subtitle">Content Change Detection &amp; Summarization</p>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Web monitoring system that detects content changes using SHA256 hashing, sends alerts, and uses an LLM to summarize what changed.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Change Detection</span>
+                                <span class="tech-tag">AI Summarization</span>
+                                <span class="tech-tag">Web Scraping</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/sanjay-sss/web-change-monitor" class="project-link" target="_blank" rel="noopener">
+                                    <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="contact-details">
-                        <h4>Phone</h4>
-                        <p>+91 8220489212</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h4>Location</h4>
-                        <p>Coimbatore, Tamil Nadu, India</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fab fa-linkedin"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h4>LinkedIn</h4>
-                        <p>linkedin.com/in/sanjay0204</p>
+
+                    <div class="project-card personal">
+                        <div class="project-header">
+                            <h3 class="project-title">Speech Emotion Recognition</h3>
+                            <p class="project-subtitle">Deep Learning Audio Classifier</p>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                CNN-based model that classifies emotion from speech audio, achieving 85% accuracy on real-time classification.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Deep Learning</span>
+                                <span class="tech-tag">CNN</span>
+                                <span class="tech-tag">Audio Processing</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/sanjay-sss/Speech-emotion-recognition-cnn" class="project-link" target="_blank" rel="noopener">
+                                    <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="contact-form">
-                <h3 style="margin-bottom: 2rem; color: var(--primary-color); font-weight: 700; font-size: 1.5rem;">Send a Message</h3>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <h2 class="section-title" data-aos="fade-up">Professional Experience</h2>
+            <div class="experience-timeline" data-aos="fade-up" data-aos-delay="100">
+                <div class="experience-item">
+                    <div class="experience-content">
+                        <h3 class="experience-title">AI Engineer</h3>
+                        <h4 class="experience-company">SPAN Technology</h4>
+                        <p class="experience-date">December 2023 - Present</p>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Design and build custom MCP servers and clients with multi-transport support (SSE and the native MCP protocol) across multiple AI clients — Claude, ChatGPT, Cursor, and Cline</li>
+                                <li>Develop an AI Copilot combining OpenAI and Anthropic Claude for agentic RAG workflows, contributing to a 35% reduction in filing errors</li>
+                                <li>Migrated the copilot's vector store from Pinecone to PostgreSQL/pgvector and added Langfuse for LLM observability and tracing</li>
+                                <li>Building a document intelligence pipeline for tax form processing (1042-S, W-9), combining AWS Textract and Google Gemini for multi-model extraction across 10,000+ documents</li>
+                                <li>Build AI agents with LangChain and LangGraph, including retry and error-handling logic; deploy and operate services via Docker, Jenkins CI/CD, and AWS (S3, CloudWatch, Bedrock)</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-content">
+                        <h3 class="experience-title">Data Scientist Intern</h3>
+                        <h4 class="experience-company">NEEWEE Analytics</h4>
+                        <p class="experience-date">July 2022 - December 2022</p>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Applied gradient boosting models to large-scale manufacturing data, contributing to a 15% improvement in production efficiency</li>
+                                <li>Built recommendation logic for optimal parameter identification as part of a cross-functional process-optimization effort</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">
-                        <i class="fas fa-paper-plane"></i>
-                        Send Message
-                    </button>
-                </form>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2 class="section-title" data-aos="fade-up">Let's Collaborate</h2>
+            <div class="contact-content" data-aos="fade-up" data-aos-delay="100">
+                <div class="contact-info">
+                    <h3 style="margin-bottom: 2rem; color: var(--primary-color); font-weight: 700; font-size: 1.5rem;">Contact Information</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p><a href="mailto:sanjaysiva0204@gmail.com">sanjaysiva0204@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p><a href="tel:+918220489212">+91 8220489212</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Coimbatore, Tamil Nadu, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <p><a href="https://www.linkedin.com/in/sanjay0204" target="_blank" rel="noopener">linkedin.com/in/sanjay0204</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 0.75rem; color: var(--primary-color); font-weight: 700; font-size: 1.5rem;">Send a Message</h3>
+                    <p class="contact-form-note">This opens your email client with the message pre-filled — this site has no backend, so nothing is sent silently.</p>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/sanjay0204" class="social-link" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
+                <a href="https://www.linkedin.com/in/sanjay0204" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                 </a>
-                <a href="https://github.com/sanjay-sss" class="social-link" target="_blank">
-                    <i class="fab fa-github"></i>
+                <a href="https://github.com/sanjay-sss" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
                 </a>
-                <a href="mailto:sanjaysiva0204@gmail.com" class="social-link">
-                    <i class="fas fa-envelope"></i>
+                <a href="mailto:sanjaysiva0204@gmail.com" class="social-link" aria-label="Email">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
                 </a>
-                <a href="tel:+918220489212" class="social-link">
-                    <i class="fas fa-phone"></i>
+                <a href="tel:+918220489212" class="social-link" aria-label="Phone">
+                    <i class="fas fa-phone" aria-hidden="true"></i>
                 </a>
             </div>
-            <p>© 2025 Sanjay S. All rights reserved. Building the future of AI with measurable impact.</p>
+            <p>&copy; <span id="footerYear"></span> Sanjay S. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
         AOS.init({
-            duration: 1000,
+            duration: 800,
             once: true,
             offset: 100
         });
 
-        // Particles
-        particlesJS('particles-js', {
-            particles: {
-                number: {
-                    value: 80,
-                    density: {
-                        enable: true,
-                        value_area: 800
-                    }
-                },
-                color: {
-                    value: '#ffffff'
-                },
-                shape: {
-                    type: 'circle'
-                },
-                opacity: {
-                    value: 0.3,
-                    random: true
-                },
-                size: {
-                    value: 3,
-                    random: true
-                },
-                line_linked: {
-                    enable: true,
-                    distance: 150,
-                    color: '#ffffff',
-                    opacity: 0.2,
-                    width: 1
-                },
-                move: {
-                    enable: true,
-                    speed: 2,
-                    direction: 'none',
-                    random: false,
-                    straight: false,
-                    out_mode: 'out',
-                    bounce: false
-                }
-            },
-            interactivity: {
-                detect_on: 'canvas',
-                events: {
-                    onhover: {
-                        enable: true,
-                        mode: 'grab'
-                    },
-                    onclick: {
-                        enable: true,
-                        mode: 'push'
-                    },
-                    resize: true
-                },
-                modes: {
-                    grab: {
-                        distance: 140,
-                        line_linked: {
-                            opacity: 0.5
-                        }
-                    },
-                    push: {
-                        particles_nb: 4
-                    }
-                }
-            },
-            retina_detect: true
-        });
-
-        // Typed animation
-        new Typed('#typed', {
-            strings: ['AI Engineer', 'Machine Learning Engineer', 'GenAI Specialist'],
-            typeSpeed: 50,
-            delaySpeed: 90,
-            loop: true
-        });
+        document.getElementById('footerYear').textContent = new Date().getFullYear();
 
         // Navigation
         const navbar = document.getElementById('navbar');
@@ -1403,40 +1471,31 @@
         });
 
         mobileMenu.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
+            const isOpen = navMenu.classList.toggle('active');
             mobileMenu.classList.toggle('active');
+            mobileMenu.setAttribute('aria-expanded', String(isOpen));
         });
 
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
                 mobileMenu.classList.remove('active');
+                mobileMenu.setAttribute('aria-expanded', 'false');
             });
         });
 
         // Dark mode
         const darkToggle = document.getElementById('darkToggle');
         darkToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            darkToggle.innerHTML = document.body.classList.contains('dark-mode') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            const isDark = document.body.classList.toggle('dark-mode');
+            darkToggle.innerHTML = isDark ? '<i class="fas fa-sun" aria-hidden="true"></i>' : '<i class="fas fa-moon" aria-hidden="true"></i>';
+            darkToggle.setAttribute('aria-pressed', String(isDark));
         });
-
-        // Skill progress animation
-        const skillObserver = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    document.querySelectorAll('.progress-fill').forEach(fill => {
-                        fill.style.width = `${fill.dataset.width}%`;
-                    });
-                    skillObserver.unobserve(entry.target);
-                }
-            });
-        });
-        skillObserver.observe(document.querySelector('#skills'));
 
         // Project filters
         const filterBtns = document.querySelectorAll('.filter-btn');
         const projectCards = document.querySelectorAll('.project-card');
+        const projectSubheadings = document.querySelectorAll('.projects-subheading');
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
@@ -1445,32 +1504,26 @@
                 const filter = btn.dataset.filter;
 
                 projectCards.forEach(card => {
-                    if (filter === '*' || card.classList.contains(filter.slice(1))) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
+                    card.style.display = (filter === '*' || card.classList.contains(filter.slice(1))) ? 'flex' : 'none';
+                });
+                projectSubheadings.forEach(heading => {
+                    heading.style.display = filter === '*' ? 'block' : 'none';
                 });
             });
         });
 
-        // Form submission
-        document.getElementById('contactForm').addEventListener('submit', async(e) => {
+        // Contact form -> mailto (no backend on this static site)
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
             e.preventDefault();
             const form = e.target;
-            const button = form.querySelector('button');
-            const originalText = button.innerHTML;
+            const name = form.name.value;
+            const email = form.email.value;
+            const subject = form.subject.value;
+            const message = form.message.value;
 
-            button.disabled = true;
-            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-
-            // Simulate submission
-            await new Promise(resolve => setTimeout(resolve, 1500));
-
-            alert('Message sent successfully! I\'ll respond soon.');
-            form.reset();
-            button.innerHTML = originalText;
-            button.disabled = false;
+            const body = `From: ${name} (${email})\n\n${message}`;
+            const mailtoLink = `mailto:sanjaysiva0204@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoLink;
         });
 
         // Stats counter
@@ -1478,26 +1531,21 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     document.querySelectorAll('.stat-number').forEach(el => {
-                        const target = el.textContent.includes('+') ? parseFloat(el.textContent) : parseFloat(el.textContent.replace('%', ''));
-                        let current = 0;
-                        const increment = target / 50;
-                        const update = () => {
-                            current += increment;
-                            if (el.textContent.includes('+')) {
-                                el.textContent = Math.round(current) + '+';
-                            } else if (el.textContent.includes('%')) {
-                                el.textContent = Math.round(current) + '%';
-                            } else if (el.textContent.includes('k+')) {
-                                el.textContent = Math.round(current) + 'k+';
-                            } else {
-                                el.textContent = Math.round(current);
-                            }
-                            
-                            if (current < target) {
+                        const target = parseFloat(el.dataset.value);
+                        const suffix = el.dataset.suffix || '';
+                        const decimals = parseInt(el.dataset.decimals || '0', 10);
+                        const duration = 1200;
+                        const start = performance.now();
+
+                        const update = (now) => {
+                            const progress = Math.min((now - start) / duration, 1);
+                            const current = target * progress;
+                            el.textContent = current.toFixed(decimals) + suffix;
+                            if (progress < 1) {
                                 requestAnimationFrame(update);
                             }
                         };
-                        update();
+                        requestAnimationFrame(update);
                     });
                     statsObserver.unobserve(entry.target);
                 }
